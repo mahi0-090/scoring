@@ -1,6 +1,5 @@
 flask
 pandas
-pickle
 numpy
 lightgbm
 zipfile
