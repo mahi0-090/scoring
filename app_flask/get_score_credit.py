@@ -9,10 +9,12 @@ from lightgbm import LGBMClassifier
 def load_data():
     
     # Données générales
-    initial_data = pd.read_csv('../data/application_train.csv', index_col='SK_ID_CURR', encoding ='utf-8')
+    z = ZipFile('../data/general_info_app.zip')
+    initial_data = pd.read_csv(z.open('general_info_app.csv'), index_col='SK_ID_CURR', encoding ='utf-8')
     
     # Données de travail pour sélection modèle
-    clean_data = pd.read_csv('../data/training_data_clean.csv', index_col='SK_ID_CURR', encoding ='utf-8')
+    z = ZipFile('../data/training_data_clean.zip')
+    clean_data = pd.read_csv(z.open('training_data_clean.csv'), index_col='SK_ID_CURR', encoding ='utf-8')
     target = clean_data['TARGET']
     clean_data = clean_data.drop(columns='TARGET', axis=1)
     
