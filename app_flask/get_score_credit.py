@@ -71,4 +71,4 @@ def get_score_credit(id_client):
     
 #lancement de l'application
 if __name__ == '__main__':
-    app.run(port = environ.get('PORT', 33507))
+    app.run(host='0.0.0.0', port = environ.get('PORT', 33507))
