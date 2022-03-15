@@ -10,17 +10,17 @@ from zipfile import ZipFile
 def load_data():
     
     # Données générales
-    z = ZipFile('../data/general_info_app.zip')
+    z = ZipFile('data/general_info_app.zip')
     initial_data = pd.read_csv(z.open('general_info_app.csv'), index_col='SK_ID_CURR', encoding ='utf-8')
     
     # Données de travail pour sélection modèle
-    z = ZipFile('../data/training_data_clean.zip')
+    z = ZipFile('data/training_data_clean.zip')
     clean_data = pd.read_csv(z.open('training_data_clean.csv'), index_col='SK_ID_CURR', encoding ='utf-8')
     target = clean_data['TARGET']
     clean_data = clean_data.drop(columns='TARGET', axis=1)
     
     # Description
-    description = pd.read_csv("../data/features_description.csv", 
+    description = pd.read_csv("data/features_description.csv", 
                                usecols=['Row', 'Description'], encoding= 'unicode_escape')
 
 
