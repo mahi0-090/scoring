@@ -29,7 +29,7 @@ def load_data():
 def load_model():
 
     '''loading the trained model'''
-    pickle_in = open('../model/LGBM_model_final.pkl', 'rb') 
+    pickle_in = open('model/LGBM_model_final.pkl', 'rb') 
     clf = pickle.load(pickle_in)
     
     return clf
