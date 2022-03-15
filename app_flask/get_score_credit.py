@@ -43,7 +43,8 @@ def load_customer_score(data, customer_id, model):
     
 
 # App config.
-DEBUG = True
+# EN prod debug=False
+DEBUG = False
 app = Flask(__name__)
 app.config.from_object(__name__)
 app.config['SECRET_KEY'] = 'NOSECRETKEY'
