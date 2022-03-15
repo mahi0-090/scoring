@@ -48,6 +48,7 @@ DEBUG = False
 app = Flask(__name__)
 app.config.from_object(__name__)
 app.config['SECRET_KEY'] = 'NOSECRETKEY'
+app.listen(process.env.PORT || 5000)
 
 initial_data, clean_data, target, description = load_data()
 model = load_model()
