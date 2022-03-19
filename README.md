@@ -10,6 +10,30 @@ Prêt à dépenser décide donc de développer un dashboard interactif pour que 
 #### Traitement des données
 Features engineering effectué à partir à partir du kernel Kaggle [Lightgbm with simple features](https://www.kaggle.com/jsaguiar/lightgbm-with-simple-features)
 
+#### Modélisation :
+PLAN :
+##### 1. Chargement des données
+##### 2. Analyse exploratoire
+###### - Répartition de la cible
+###### - Répartition des clients par genre
+###### - Répartition des clients selon leur situation familiale
+###### - Répartition des clients selon leur âge
+###### - Répartition des clients selon les revenus
+###### - Répartition des clients selon leur emploi
+###### - Répartition des clients selon leur niveau d'études
+###### - Les crédits 
+##### 3. Features Engineering
+##### 4. Sélection du meilleur modèle de classification (test)
+###### - Pondération
+###### - Sous-échantillonnage
+###### - Sur-échantillonnage (SMOTE)
+###### - SMOTE suivi d'un sous-échantillonnage
+###### - Sur-échantillonnage (ADASYN)
+##### 5. Choix définitif du modèle et optimisation des paramètres
+##### 6. Calcul de la fonction coût
+##### 7. Features importance
+
+
 
 #### Dashboard Scoring Credit:
 Il s'agit d'une Web App effectuée en collaboration entre Heroku et Streamlit. Elle est consultable [ici](https://scoring-credit-dashboard.herokuapp.com/).
